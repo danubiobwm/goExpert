@@ -1,0 +1,1 @@
+CEP: Localidade: %s%!(EXTRA string=UF: %s, string=63031-340, string=Juazeiro do Norte, string=CE)

@@ -1,0 +1,38 @@
+POST http://localhost:8000/products
+Content-Type: application/json
+
+{
+  "name": "product Table",
+  "price": 100.0
+}
+
+###
+
+GET http://localhost:8000/products/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODkxMzMzODAsInN1YiI6ImYwOTBhNjRiLTc0NzAtNGMwZi1iMzM0LTVmNzY2YWRlNmIwYSJ9.xJqIfIzM55opdDYGVmQzgdBmTR3mi3-HZbtmsFLO6Rc
+
+###
+GET http://localhost:8000/products/2735ddc3-98d4-4f76-8dba-ba05a1d7f0ef
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODkxMzMzODAsInN1YiI6ImYwOTBhNjRiLTc0NzAtNGMwZi1iMzM0LTVmNzY2YWRlNmIwYSJ9.xJqIfIzM55opdDYGVmQzgdBmTR3mi3-HZbtmsFLO6Rc
+
+
+###
+
+PUT  http://localhost:8000/products/07c8400a-626d-4ce1-abae-bf8a2e79609b
+Content-Type: application/json
+
+{
+  "name": "products TV 200",
+  "price": 100
+}
+
+###
+DELETE   http://localhost:8000/products/07c8400a-626d-4ce1-abae-bf8a2e79609b
+Content-Type: application/json
+
+
+###
+GET    http://localhost:8000/products/
+Content-Type: application/json
