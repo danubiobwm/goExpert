@@ -9,3 +9,5 @@ func CalculateTax(amount float64) float64 {
 	}
 	return 5.0
 }
+
+//test
