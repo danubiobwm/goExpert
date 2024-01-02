@@ -2,33 +2,13 @@
 
 package model
 
-type Category struct {
-	ID          string    `json:"id"`
-	Name        string    `json:"name"`
-	Description *string   `json:"description,omitempty"`
-	Courses     []*Course `json:"courses"`
-}
-
-type Course struct {
-	ID          string    `json:"id"`
-	Name        string    `json:"name"`
-	Description *string   `json:"description,omitempty"`
-	Category    *Category `json:"category"`
-}
-
-type Mutation struct {
-}
-
 type NewCategory struct {
 	Name        string  `json:"name"`
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description"`
 }
 
 type NewCourse struct {
 	Name        string  `json:"name"`
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description"`
 	CategoryID  string  `json:"categoryId"`
-}
-
-type Query struct {
 }
