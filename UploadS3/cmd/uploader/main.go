@@ -22,9 +22,9 @@ func init() {
 	sess, err := session.NewSession(&aws.Config{
 		Region: aws.String("us-east-1"),
 		Credentials: credentials.NewStaticCredentials(
-			"AKIA4OXCOHAXNRXNJEFB",
-			"ijgGjpheCKDCW0bH9qwvYaBagh9KD6DS9au1ZAsc",
-			"",
+			"s3key",
+			"s3secret",
+			"token",
 		),
 	})
 	if err != nil {
