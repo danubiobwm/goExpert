@@ -1,13 +1,11 @@
 version: "2"
 
 sql:
-  - schema: "sql/migrations"
-    queries: "sql/queries"
-    engine: "mysql"
+  - engine: "mysql"
+    schema: "sql/schema.sql"
+    queries: "sql/queries.sql"
+
     gen:
       go:
         package: "db"
         out: "internal/db"
-        overrides:
-          - db_type: "decimal"
-            go_type: "float64"

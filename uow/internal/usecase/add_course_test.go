@@ -6,11 +6,12 @@ import (
 	"testing"
 
 	"github.com/danubiobwm/goExpert/uow/internal/repository"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestAddCourse(t *testing.T) {
-	dbt, err := sql.Open("mysql", "root:root@tcp(localhost:3306)/courses")
+	dbt, err := sql.Open("mysql", "admin:admin@admin@tcp(localhost:3306)/courses")
 	assert.NoError(t, err)
 
 	dbt.Exec("DROP TABLE if exists `courses`;")
@@ -18,6 +19,9 @@ func TestAddCourse(t *testing.T) {
 
 	dbt.Exec("CREATE TABLE IF NOT EXISTS `categories` (id int PRIMARY KEY AUTO_INCREMENT, name varchar(255) NOT NULL);")
 	dbt.Exec("CREATE TABLE IF NOT EXISTS `courses` (id int PRIMARY KEY AUTO_INCREMENT, name varchar(255) NOT NULL, category_id INTEGER NOT NULL, FOREIGN KEY (category_id) REFERENCES categories(id));")
+
+	_, err = dbt.Exec("INSERT INTO `categories` (name) VALUES ('Category 2');")
+	assert.NoError(t, err)
 
 	input := InputUseCase{
 		CategoryName:     "Category 1", // ID->1
