@@ -4,8 +4,8 @@ type ProductUseCase struct {
 	repository ProductRepository
 }
 
-func NewProductUseCase(repository ProductRepository) *ProductUseCase {
-	return &ProductUseCase{repository}
+func NewProductUseCase(repository *ProductRepository) *ProductUseCase {
+	return &ProductUseCase{*repository}
 }
 
 // GetProduct return a product by id
