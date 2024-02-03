@@ -6,12 +6,12 @@ package main
 import (
 	"database/sql"
 
-	"github.com/danubiobwm/goExpert/CleanArch/internal/entity"
-	"github.com/danubiobwm/goExpert/CleanArch/internal/event"
-	"github.com/danubiobwm/goExpert/CleanArch/internal/infra/database"
-	"github.com/danubiobwm/goExpert/CleanArch/internal/infra/web"
-	"github.com/danubiobwm/goExpert/CleanArch/internal/usecase"
-	"github.com/danubiobwm/goExpert/CleanArch/pkg/events"
+	"github.com/devfullcycle/20-CleanArch/internal/entity"
+	"github.com/devfullcycle/20-CleanArch/internal/event"
+	"github.com/devfullcycle/20-CleanArch/internal/infra/database"
+	"github.com/devfullcycle/20-CleanArch/internal/infra/web"
+	"github.com/devfullcycle/20-CleanArch/internal/usecase"
+	"github.com/devfullcycle/20-CleanArch/pkg/events"
 	"github.com/google/wire"
 )
 

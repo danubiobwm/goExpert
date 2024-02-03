@@ -2,13 +2,16 @@ version: '3'
 
 services:
   mysql:
-    image: mysql:5.7
+    image: mysql:latest
     container_name: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: D@4u1985
+      MYSQL_USER: orders
       MYSQL_DATABASE: orders
-      MYSQL_PASSWORD: root
+      MYSQL_PASSWORD: D@4u1985
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_RANDOM_ROOT_PASSWORD: true
     ports:
       - 3306:3306
     volumes:
