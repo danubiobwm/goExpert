@@ -1,6 +1,8 @@
 package usecase
 
 import (
+	"log"
+
 	"github.com/devfullcycle/20-CleanArch/internal/entity"
 )
 
@@ -15,6 +17,7 @@ func NewListOrdersUseCase(OrderRepository entity.OrderRepositoryInterface) *List
 }
 
 func (uc *ListOrdersUseCase) Execute() ([]OrderOutputDTO, error) {
+	log.Println("Executing ListOrdersUseCase")
 	orders, err := uc.OrderRepository.List()
 	if err != nil {
 		return nil, err
