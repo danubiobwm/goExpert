@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  goapp:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    environment:
+      - GO111MODULE=on
+      - CGO_ENABLED=0
+    command: go run main.go
