@@ -38,14 +38,14 @@ func main() {
 	}
 	defer db.Close()
 
-	driver, _ := mysql.WithInstance(db, &mysql.Config{})
-	migrations, err := migrate.NewWithDatabaseInstance("file://../../migrations", "mysql", driver)
+	// driver, _ := mysql.WithInstance(db, &mysql.Config{})
+	// migrations, err := migrate.NewWithDatabaseInstance("file://../../migrations", "mysql", driver)
 
-	if err != nil {
-		panic(err)
-	}
+	// if err != nil {
+	// 	panic(err)
+	// }
 
-	migrations.Up()
+	// migrations.Up()
 
 	rabbitMQChannel := getRabbitMQChannel()
 
